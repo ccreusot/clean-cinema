@@ -5,6 +5,7 @@
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds
  */
 plugins {
+    base
     kotlin("jvm") version "1.4.10" apply false
 }
 
@@ -16,4 +17,10 @@ allprojects {
 
 subprojects {
     version = "1.0"
+}
+
+dependencies {
+    subprojects.forEach {
+        archives(it)
+    }
 }
