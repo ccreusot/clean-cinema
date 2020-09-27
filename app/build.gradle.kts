@@ -11,12 +11,11 @@ plugins {
 dependencies {
     implementation(project(":domain"))
     implementation(project(":infra"))
-    implementation(kotlin("stdlib"))
 
-    testImplementation(kotlin("test-common"))
-    testImplementation(kotlin("test-annotations-common"))
-    testImplementation(kotlin("test-junit"))
-    testImplementation("io.mockk:mockk:1.10.0")
+    val koin_version = "2.1.6"
+    implementation("org.koin:koin-core:$koin_version")
+    implementation("org.koin:koin-core-ext:$koin_version")
+    implementation("org.koin:koin-test:$koin_version")
 }
 
 application {

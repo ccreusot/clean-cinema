@@ -16,11 +16,17 @@ allprojects {
 }
 
 subprojects {
-    version = "1.0"
-}
+    apply(plugin = "org.jetbrains.kotlin.jvm")
 
-dependencies {
-    subprojects.forEach {
-        archives(it)
+    dependencies {
+        val implementation by configurations
+        val testImplementation by configurations
+
+        implementation(kotlin("stdlib"))
+
+        testImplementation(kotlin("test-common"))
+        testImplementation(kotlin("test-annotations-common"))
+        testImplementation(kotlin("test-junit5"))
+        testImplementation("io.mockk:mockk:1.10.0")
     }
 }

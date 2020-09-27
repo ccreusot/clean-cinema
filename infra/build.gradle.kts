@@ -11,10 +11,6 @@ plugins {
 
 dependencies {
     implementation(project(":domain"))
-    implementation(kotlin("stdlib"))
-
-    testImplementation(kotlin("test-common"))
-    testImplementation(kotlin("test-annotations-common"))
-    testImplementation(kotlin("test-junit"))
-    testImplementation("io.mockk:mockk:1.10.0")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
 }

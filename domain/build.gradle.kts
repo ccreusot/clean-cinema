@@ -10,10 +10,4 @@ plugins {
 }
 
 dependencies {
-    implementation(kotlin("stdlib"))
-
-    testImplementation(kotlin("test-common"))
-    testImplementation(kotlin("test-annotations-common"))
-    testImplementation(kotlin("test-junit"))
-    testImplementation("io.mockk:mockk:1.10.0")
 }
