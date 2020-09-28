@@ -3,12 +3,14 @@
  */
 package com.cinema.domain
 
+import org.amshove.kluent.`should be equal to`
+import org.amshove.kluent.should
 import kotlin.test.Test
 import kotlin.test.assertTrue
 
 class LibraryTest {
     @Test fun testSomeLibraryMethod() {
         val classUnderTest = Library()
-        assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'")
+        classUnderTest.someLibraryMethod() `should be equal to` true
     }
 }

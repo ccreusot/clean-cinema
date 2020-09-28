@@ -27,6 +27,7 @@ subprojects {
         testImplementation(kotlin("test-common"))
         testImplementation(kotlin("test-annotations-common"))
         testImplementation(kotlin("test-junit5"))
+        testImplementation("org.amshove.kluent:kluent:1.61")
         testImplementation("io.mockk:mockk:1.10.0")
     }
 }
