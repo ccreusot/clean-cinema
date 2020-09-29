@@ -11,7 +11,7 @@ plugins {
 
 allprojects {
     repositories {
-        jcenter() 
+        jcenter()
     }
 }
 
@@ -23,10 +23,12 @@ subprojects {
         val testImplementation by configurations
 
         implementation(kotlin("stdlib"))
+        implementation(kotlin("reflect"))
 
+        testImplementation(kotlin("test"))
         testImplementation(kotlin("test-common"))
         testImplementation(kotlin("test-annotations-common"))
-        testImplementation(kotlin("test-junit5"))
+        testImplementation(kotlin("test-junit"))
         testImplementation("org.amshove.kluent:kluent:1.61")
         testImplementation("io.mockk:mockk:1.10.0")
     }
